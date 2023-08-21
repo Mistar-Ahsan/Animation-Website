@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+    height: 100vh;
+    background: linear-gradient(#21b3e1,#fff);
+    overflow: hidden;
+    position:relative ;
+
+}
+.navBar{
+    width: 100%;
+    /* height: 60px; */
+    border-bottom: 1px solid #b7e7f6;
+}
+nav{
+    width: 80%;
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+}
+.logo{
+    flex-basis: 15%;
+}
+.logo, img{
+    width: 100px;
+}
+.navLink{
+    flex: 1;
+    text-align: center;
+}
+.navLink ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 15px 5px;
+    margin: 0 25px;
+    position: relative;
+}
+.navLink ul li a{
+    text-decoration: none;
+    color: #b7e7f6;
+}
+
+.navLink ul li::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background:transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+.navLink ul li:hover:after{
+    background: #fff;
+}
+.active::after{
+ background: #fff !important;
+}
+
+
+.menuIcon{
+    flex-basis: 15%;
+
+}
+
+.menuIcon img{
+    width: 35px;
+    float:right ;
+}
+
+.content{
+    
+    width: 300px;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+}
+.socialIcons img{
+    width: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+
+}
+
+
+.searchBox input{
+    width: 100%;
+    padding: 7px 15px;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #b7e7f6;
+}
+
+.searchBox input:hover{
+    border: 1px solid #b7e7f6;
+    background: #21b3e1;
+    
+}
+.searchBox button{
+    padding: 3px 3px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    
+}
+
+.searchBox button:hover{
+    background-color: #b7e7f6;
+    transition: 0.5s;
+    cursor: pointer;
+    height:30% ;
+    width: 30%;
+}
+
+/* id */
+
+#clouds{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    animation: clouds 5s linear infinite;
+}
+
+/* clouds animation */
+@keyframes clouds{
+    0%{
+        top: -100px;
+    }
+    20%{
+        top: 100px;
+    }
+    80%{
+        top: 100px;
+    }
+    100%{
+        top: -100px;
+    }
+}
+
+
+
+/* clouds animation end */
+
+
+
+#plane{
+    width: 200px;
+    position: absolute;
+    top: 180px;
+    left: -250px;
+    z-index: 2;
+    animation: fly 5s linear infinite;
+
+    
+}
+/* plane animation */
+@keyframes fly{
+    0%{
+        left: -250px;
+    }
+    20%{
+        left: -250px;
+    }
+    80%{
+        left: 250px;
+    }
+    100%{
+        left: 110%;
+    }
+}
+/* plane animation */
+#hotAirBaloons{
+    height: 400px;
+    width: 700px;
+    position: absolute;
+    bottom: -420px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: baloons 5s linear infinite;
+    
+}
+/* baloon animation */
+@keyframes baloons{
+    0%{
+        bottom: -420px;
+    }
+    20%{
+        bottom: 100px;
+    }
+    80%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: -420px;
+    }
+}
+/* baloon animation */
+
+
+/* baloon classes */
+.baloon1{
+    width: 150px;
+    opacity: 0.4;
+
+}
+.baloon2{
+    width: 350px;
+
+}
+.baloon3{
+    width: 180px;
+    opacity: 0.5;
+}
+
+
+#myImg{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
